@@ -305,7 +305,7 @@ namespace DoubleTakeInventory
             {
                 SubTotal = TheSale.SubTotal();
                 SalesTaxes = (SubTotal + Discount) * SalesTaxRate;
-                SalesTaxes = Math.Round(SalesTaxes, 2);
+                SalesTaxes = Math.Round(SalesTaxes, 2, MidpointRounding.AwayFromZero);
                 TotalSale = SubTotal + Discount + SalesTaxes;
                 txtSubTotal.Text = SubTotal.ToString("c");
                 txtDiscount.Text = Discount.ToString("c");
